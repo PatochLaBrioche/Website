@@ -203,7 +203,10 @@ try
                         ?>
                         <div class="msgContainer">
                             <div class="msgRetour">
-                                <?php echo "Joueur ajouté avec succès !";?>
+                                <?php echo "Joueur ajouté avec succès !";
+                                header("refresh:3;url=./P.joueurs.php");
+                                echo "Vous allez être redirigé sur la page joueur dans 3 seconds.";
+                                ?>
                             </div>
                         </div>
                         <?php
@@ -223,7 +226,11 @@ try
             ?>
             <div class="msgContainer">
                 <div class="msgRetour">
-                    <?php echo "Ce joueur existe déjà"; ?>
+                    <?php echo "Ce joueur existe déjà";
+                    header("refresh:3;url=./P.joueurs.php");
+                    echo "Vous allez être redirigé sur la page joueur dans 3 seconds.";
+                    ?>
+                    
                 </div>
             </div>
             <?php
