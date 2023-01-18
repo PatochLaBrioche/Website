@@ -206,8 +206,8 @@ try
                         ?>
                         <div class="msgContainer">
                             <div class="msgRetour">
-                                <?php echo "Joueur modifié avec succès !";
-                                header("refresh:3;url=./P.joueurs.php");
+                                <?php echo "Joueur modifié avec succès !";?><br><?php
+                                header("refresh:5;url=./P.joueurs.php");
                                 echo "Vous allez être redirigé sur la page joueur dans 3 seconds.";
                                 ?>
                             </div>
@@ -218,7 +218,10 @@ try
                     ?>
                     <div class="msgContainer">
                         <div class="msgRetour">
-                            <?php echo $errors; ?>
+                            <?php echo $errors; ?><br><?php
+                            header("refresh:5;url=./P.joueurs.php");
+                            echo "Vous allez être redirigé sur la page joueur dans 3 seconds.";
+                            ?>
                         </div>
                     </div>
                     <?php
@@ -231,8 +234,8 @@ try
                     ?>
                     <div class="msgContainer">
                         <div class="msgRetour">
-                            <?php echo "Joueur modifié avec succès !";
-                            header("refresh:3;url=./P.joueurs.php");
+                            <?php echo "Joueur modifié avec succès !";?><br><?php
+                            header("refresh:5;url=./P.joueurs.php");
                             echo "Vous allez être redirigé sur la page joueur dans 3 seconds.";
                             ?>
                         </div>
@@ -246,8 +249,8 @@ try
         ?>
         <div class="msgContainer">
             <div class="msgRetour">
-                <?php echo "Ce joueur n'existe pas";
-                header("refresh:3;url=./P.joueurs.php");
+                <?php echo "Ce joueur n'existe pas";?><br><?php
+                header("refresh:5;url=./P.joueurs.php");
                 echo "Vous allez être redirigé sur la page joueur dans 3 seconds.";
                 ?>
             </div>
