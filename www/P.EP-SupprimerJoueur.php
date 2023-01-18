@@ -82,8 +82,8 @@
             <div class="msgRetour">
                 <?php 
                 echo "Le joueur a été supprimé";
-                header("refresh:5;url=./P.joueurs.php");
-                echo "Vous allez être redirigé dans 5 seconds."; 
+                header("refresh:3;url=./P.joueurs.php");
+                echo "Vous allez être redirigé sur la page joueur dans 3 seconds."; 
                 ?>
             </div>
         </div>
@@ -95,14 +95,17 @@
         ?>
         <div class="msgContainer">
             <div class="msgRetour">
-                <?php echo "Ce joueur n'existe pas"; ?>
+                <?php echo "Ce joueur n'existe pas";
+                header("refresh:3;url=./P.joueurs.php");
+                echo "Vous allez être redirigé sur la page joueur dans 3 seconds.";
+                ?>
             </div>
         </div>
         <?php
     }
   ?>
 
-  <footer >
+  <footer id="IndexFooter" >
     <div>
       <p>Contacts</p>
     </div>

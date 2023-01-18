@@ -206,7 +206,10 @@ try
                         ?>
                         <div class="msgContainer">
                             <div class="msgRetour">
-                                <?php echo "Joueur modifié avec succès !";?>
+                                <?php echo "Joueur modifié avec succès !";
+                                header("refresh:3;url=./P.joueurs.php");
+                                echo "Vous allez être redirigé sur la page joueur dans 3 seconds.";
+                                ?>
                             </div>
                         </div>
                         <?php
@@ -228,7 +231,10 @@ try
                     ?>
                     <div class="msgContainer">
                         <div class="msgRetour">
-                            <?php echo "Joueur modifié avec succès !";?>
+                            <?php echo "Joueur modifié avec succès !";
+                            header("refresh:3;url=./P.joueurs.php");
+                            echo "Vous allez être redirigé sur la page joueur dans 3 seconds.";
+                            ?>
                         </div>
                     </div>
                     <?php
@@ -240,7 +246,10 @@ try
         ?>
         <div class="msgContainer">
             <div class="msgRetour">
-                <?php echo "Ce joueur n'existe pas"; ?>
+                <?php echo "Ce joueur n'existe pas";
+                header("refresh:3;url=./P.joueurs.php");
+                echo "Vous allez être redirigé sur la page joueur dans 3 seconds.";
+                ?>
             </div>
         </div>
         <?php
