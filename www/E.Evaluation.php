@@ -13,8 +13,9 @@
     <div class="titre-header">
       <h1>Evaluation des joueurs</h1>
     </div>
-    <!-- menu header -->
-    <nav class="header-menu">
+
+     <!-- menu header -->
+     <nav class="header-menu">
       <div class="container">
         <ul class="navibar">
           <li class="menu-item">
@@ -51,7 +52,6 @@
         </ul>
       </div>
     </nav>
- 
   </header>
 
   <?php
@@ -64,7 +64,7 @@
     exit();
   }
 
-  $stmt = $conn->prepare("SELECT * FROM `match`");
+  $stmt = $conn->prepare("SELECT * FROM `match` where d_match < now()");
   $stmt->execute();
   if($stmt == false){
       echo "Erreur de select.";
@@ -91,81 +91,49 @@
 
 <body>
   
-  <div class="selection">
-    <p>Sélectionner un match :</p>
-    <select id="match-select">
-        <?php foreach ($matchs as $match): ?>
-            <option value="<?php echo $match['id_match']; ?>"><?php echo $match['d_match']; ?></option>
-        <?php endforeach; ?>
-    </select>
-  </div>
-  <div class="selection">
-    <p>Sélectionner un joueur :</p>
-    <select id="joueur-select" disabled>
-    </select>
-  </div>
-  <div class="evaluation">
-    <p>Evaluation du joueur :</p>
-    <select id="evaluation-select" disabled>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
-  </div>
-  <button id="valider-button" disabled>Valider</button>
+  <form action="E.insertIntoDB.php" method="post" class="tableau">
 
-    <!-- Cette partie du code récupère les joueurs qui sont affectés au match sélectionné dans la balise <select-match> -->
-    <script>
-        $(document).ready(function() {
-          // Activer le select de joueur quand un match est sélectionné
-          $("#match-select").change(function() {
-            $("#joueur-select").prop("disabled", false);
-            // Récupérer les joueurs du match sélectionné en utilisant une requête AJAX
-            var idMatch = $(this).val();
-            $.ajax({
-              type: "POST",
-              url: "get-joueurs-by-match.php",
-              data: { id_match: idMatch },
-              success: function(data) {
-                $("#joueur-select").html(data);
-              }
-            });
-          });
-        
-          // Activer le select d'évaluation et le bouton valider quand un joueur est sélectionné
-          $("#joueur-select").change(function() {
-            $("#evaluation-select").prop("disabled", false);
-            $("#valider-button").prop("disabled", false);
-          });
-          // Envoyer la note d'évaluation en utilisant une requête AJAX lorsque le bouton valider est cliqué
-          $("#valider-button").click(function() {
-            var numLicense = $("#joueur-select").val();
-            var evaluation = $("#evaluation-select").val();
-            $.ajax({
-              type: "POST",
-              url: "E.insertIntoDB.php",
-              data: { num_license: numLicense, evaluation: evaluation },
-              success: function(data) {
-                alert("Evaluation enregistrée avec succès!");},
-              error: function(data) {
-                alert("Une erreur s'est produite lors de l'enregistrement de l'évaluation. Veuillez réessayer.");
-              }
-              });
-            });
-          });
-    </script>
+    <div class="evaluation">
+      <p>Sélectionner un match :</p>
+      <select id="match-select">
+          <?php foreach ($matchs as $match): ?>
+              <option value="<?php echo $match['id_match']; ?>"><?php echo $match['d_match']; ?></option>
+          <?php endforeach; ?>
+      </select>
+    </div>
 
-
-
+    <div class="evaluation">
+      <p>Sélectionner un joueur :</p>
+      <select id="joueur-select">
+          <?php foreach ($joueurs as $joueur): ?>
+              <option value="<?php echo $joueur['num_license']; ?>"><?php echo $joueur['nom']; ?></option>
+          <?php endforeach; ?>
+      </select>
+    </div>
     
+    <div class="evaluation">
+      <p>Evaluation du joueur :</p>
+      <select id="evaluation-select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
 
-    <footer id="IndexFooter">
-        <div>
-          <p>Contacts</p>
-        </div>
-    </footer>    
+    <div class="evaluation">
+      <input type="submit" value="Valider" id="input"/>
+      <input type="submit" value="Annuler" id="input"/>
+    </div>
+            
+  </form>
+
+  <footer>
+      <div>
+        <p>Contacts</p>
+      </div>
+  </footer>    
 
 </body>
 </html>
