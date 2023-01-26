@@ -14,41 +14,44 @@
         <h1>Entrez les données à modifier</h1>
         </div>
 
-        <!-- menu header -->
-        <nav class="header-menu">
-        <div class="container">
-            <ul class="navibar">
-            <li class="menu-item">
-                <a href="./Menu.php">Accueil</a>
-            </li>
-            <li class="menu-item menu-dropdown">
-                <a href="./P.joueurs.php">Joueurs</a>
-                <ul class="droppedMenu">
-                <li class="menu-item">
-                    <a href="./P.NP-NouveauJoueur.php">Ajouter un joueur</a>
-                </li>
-                <li class="menu-item">
-                    <a href="./P.EP-ModifierJoueur.php">Modifier un joueur</a>
-                </li>
-                </ul>
-            </li>
-            <li class="menu-item menu-dropdown">
-                <a href="./M.match.php">Match</a>
-                <ul class="droppedMenu">
-                <li class="menu-item">
-                    <a href="./M.NM-NouveauMatch.php">Ajouter un match</a>
-                </li>
-                <li class="menu-item">
-                    <a href="./M.MM-ModifierMatch.php">Modifier un match</a>
-                </li>
-                </ul>
-                <li class="menu-item">
-                    <a href="./E.Evaluation.php">Evaluation</a>
-                </li>
-            </li>
+     <!-- menu header -->
+     <nav class="header-menu">
+      <div class="container">
+        <ul class="navibar">
+          <li class="menu-item">
+            <a href="./Menu.php">Accueil</a>
+          </li>
+          <li class="menu-item menu-dropdown">
+            <a href="./P.joueurs.php">Joueurs</a>
+            <ul class="droppedMenu">
+              <li class="menu-item">
+                <a href="./P.NP-NouveauJoueur.php">Ajouter un joueur</a>
+              </li>
+              <li class="menu-item">
+                <a href="./P.EP-ModifierJoueur.php">Modifier un joueur</a>
+              </li>
             </ul>
-        </div>
-        </nav>
+          </li>
+          <li class="menu-item menu-dropdown">
+            <a href="./M.match.php">Match</a>
+            <ul class="droppedMenu">
+              <li class="menu-item">
+                <a href="./M.NM-NouveauMatch.php">Ajouter un match</a>
+              </li>
+              <li class="menu-item">
+                <a href="./M.MM-ModifierMatch.php">Modifier un match</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+              <a href="./E.Evaluation.php">Evaluation</a>
+          </li>
+          <li class="menu-item">
+              <a href="./S.selection.php">Sélection</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     </header>
 
     <?php 

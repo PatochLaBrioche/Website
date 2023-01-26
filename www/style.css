@@ -80,7 +80,6 @@ html, body {
   {
     text-align:center;
     background-color: lightblue;
-    
   }
 
   footer {
@@ -287,7 +286,7 @@ html, body {
     display: flex;
     justify-content: center;
     height: 100%;
-    margin: 7% 30% 7% 30%;
+    margin: 8% 30% 8% 30%;
     font-size: 20px;
   }
 
@@ -301,3 +300,105 @@ html, body {
     font-size: 1em;
     padding: 5px;
   }
+
+/* ----------------------- */
+/* ------Selection----- */
+/* ----------------------- */
+
+.formMatch {
+  margin: 0 auto; /* pour centrer horizontalement */
+  margin-top: 40px;
+  width: 50%; /* pour définir la largeur du formulaire */
+  padding: 2%; /* pour ajouter un espacement intérieur */
+  text-align: center; /* pour centrer les éléments de formulaire */
+  box-sizing: border-box; /* pour inclure les bordures et les padding dans la dimension du formulaire */
+  border: 1px solid rgb(0, 0, 0); /* pour ajouter une bordure */
+  font-size: 1.5em; /* pour augmenter la taille des polices */
+}
+
+.formMatch input[type="submit"] {
+  background-color: #4CAF50; /* pour changer la couleur de fond */
+  color: white; /* pour changer la couleur du texte */
+  padding: 16px 32px; /* pour ajuster la taille du bouton */
+  text-align: center; /* pour centrer le texte du bouton */
+  text-decoration: none; /* pour enlever la décoration de texte */
+  display: inline-block; /* pour afficher le bouton sur une ligne */
+  font-size: 1.2em; /* pour augmenter la taille de la police */
+  margin: 4px 2px; /* pour ajuster la distance entre le bouton et les autres éléments */
+  -webkit-transition-duration: 0.4s; /* pour animer les transitions */
+  transition-duration: 0.4s;
+  cursor: pointer; /* pour changer le curseur de la souris */
+  border-radius: 8px; /* pour ajouter des bords arrondis */
+  border: none; /* pour enlever la bordure */
+}
+
+#buttonFormMatch
+{
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 32px;
+    font-size: 1.2em;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+}
+
+.formMatch h1 {
+font-size: 1.5em; /* pour augmenter la taille de la police */
+text-align: center; /* pour centrer le titre */
+color: #cf0202; /* pour changer la couleur du titre */
+margin-bottom: 20px; /* pour ajouter de l'espacement en dessous du titre */
+}
+
+.formContainer {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+}
+
+
+#Match {
+width: 1
+00%;
+}
+
+.button-s{
+margin-left:300px;
+margin-top: 80px;
+height: 40px;
+width: 200px;
+color: green;
+}
+
+.button-a{
+margin-left:300px;
+margin-top: 80px;
+height: 40px;
+width: 200px;
+color: #ff0000;
+}
+
+.player-select-container {
+width: 25%;
+padding: 12px 20px;
+margin-left: 30px;
+margin-top: 30px;
+display: flex;
+align-items: center;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
+
+.titulaire{
+width: 100px;
+float: right;
+margin-left: 10px;
+}
+
+.player-select {
+width: 30%;
+margin-left: 10px;
+}
