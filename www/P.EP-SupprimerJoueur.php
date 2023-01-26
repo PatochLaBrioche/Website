@@ -45,6 +45,9 @@
                 <li class="menu-item">
                     <a href="./E.Evaluation.php">Evaluation</a>
                 </li>
+                <li class="menu-item menu-dropdown">
+              <a href="./S.selection.php">Sélection</a>
+            </li>
             </li>
             </ul>
         </div>
