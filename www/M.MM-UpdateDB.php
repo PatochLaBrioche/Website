@@ -41,9 +41,12 @@
                 <a href="./M.MM-ModifierMatch.php">Modifier un match</a>
               </li>
             </ul>
-            <li class="menu-item">
-                <a href="./E.Evaluation.php">Evaluation</a>
-            </li>
+          </li>
+          <li class="menu-item">
+              <a href="./E.Evaluation.php">Evaluation</a>
+          </li>
+          <li class="menu-item">
+              <a href="./S.selection.php">Sélection</a>
           </li>
         </ul>
       </div>

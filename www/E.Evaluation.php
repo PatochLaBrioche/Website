@@ -13,8 +13,7 @@
     <div class="titre-header">
       <h1>Evaluation des joueurs</h1>
     </div>
-
-     <!-- menu header -->
+    <!-- menu header -->
     <nav class="header-menu">
       <div class="container">
         <ul class="navibar">
@@ -52,6 +51,7 @@
         </ul>
       </div>
     </nav>
+ 
   </header>
 
   <?php
@@ -156,6 +156,10 @@
             });
           });
     </script>
+
+
+
+    
 
     <footer id="IndexFooter">
         <div>

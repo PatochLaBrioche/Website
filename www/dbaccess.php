@@ -1,8 +1,15 @@
 <?php
     // Définission des détails de connexion à la base de données
+	
+	// Version client
+	// $utilisateur = "root";
+    // $motdepasse = "";
+	
+	// Version hebergeur
+    $utilisateur = "id19948491_petanque_user";
+    $motdepasse = "3TS)+y01AVKd[XBA";
+    
     $serveur = "localhost";
-    $utilisateur = "root";
-    $motdepasse = "";
     $basededonnes = "id19948491_petanque_bdd";
 
     

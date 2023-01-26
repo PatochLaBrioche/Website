@@ -332,10 +332,22 @@ html, body {
   border: none; /* pour enlever la bordure */
 }
 
+#buttonFormMatch
+{
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 32px;
+    font-size: 1.2em;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+}
+
 .formMatch h1 {
-font-size: 2em; /* pour augmenter la taille de la police */
+font-size: 1.5em; /* pour augmenter la taille de la police */
 text-align: center; /* pour centrer le titre */
-color: #ff0000; /* pour changer la couleur du titre */
+color: #cf0202; /* pour changer la couleur du titre */
 margin-bottom: 20px; /* pour ajouter de l'espacement en dessous du titre */
 }
 
@@ -365,7 +377,7 @@ margin-left:300px;
 margin-top: 80px;
 height: 40px;
 width: 200px;
-color: #cf0202;
+color: #ff0000;
 }
 
 .player-select-container {

@@ -41,12 +41,12 @@
                 <a href="./M.MM-ModifierMatch.php">Modifier un match</a>
               </li>
             </ul>
-            <li class="menu-item">
-                <a href="./E.Evaluation.php">Evaluation</a>
-            </li>
-            <li class="menu-item menu-dropdown">
+          </li>
+          <li class="menu-item">
+              <a href="./E.Evaluation.php">Evaluation</a>
+          </li>
+          <li class="menu-item">
               <a href="./S.selection.php">Sélection</a>
-            </li>
           </li>
         </ul>
       </div>
@@ -237,8 +237,8 @@ try
                     ?>
                     <div class="msgContainer">
                         <div class="msgRetour">
-                            <?php echo "Joueur modifié avec succès !";?><br><?php
-                            header("refresh:5;url=./P.joueurs.php");
+                            <?php header("refresh:5;url=./P.joueurs.php");
+                            echo "Joueur modifié avec succès !";?><br><?php
                             echo "Vous allez être redirigé sur la page joueur dans 3 seconds.";
                             ?>
                         </div>
