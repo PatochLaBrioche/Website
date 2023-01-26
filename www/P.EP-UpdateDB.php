@@ -44,6 +44,9 @@
             <li class="menu-item">
                 <a href="./E.Evaluation.php">Evaluation</a>
             </li>
+            <li class="menu-item menu-dropdown">
+              <a href="./S.selection.php">Sélection</a>
+            </li>
           </li>
         </ul>
       </div>
@@ -206,7 +209,10 @@ try
                         ?>
                         <div class="msgContainer">
                             <div class="msgRetour">
-                                <?php echo "Joueur modifié avec succès !";?>
+                                <?php echo "Joueur modifié avec succès !";?><br><?php
+                                header("refresh:5;url=./P.joueurs.php");
+                                echo "Vous allez être redirigé sur la page joueur dans 3 seconds.";
+                                ?>
                             </div>
                         </div>
                         <?php
@@ -215,7 +221,10 @@ try
                     ?>
                     <div class="msgContainer">
                         <div class="msgRetour">
-                            <?php echo $errors; ?>
+                            <?php echo $errors; ?><br><?php
+                            header("refresh:5;url=./P.joueurs.php");
+                            echo "Vous allez être redirigé sur la page joueur dans 3 seconds.";
+                            ?>
                         </div>
                     </div>
                     <?php
@@ -228,7 +237,10 @@ try
                     ?>
                     <div class="msgContainer">
                         <div class="msgRetour">
-                            <?php echo "Joueur modifié avec succès !";?>
+                            <?php echo "Joueur modifié avec succès !";?><br><?php
+                            header("refresh:5;url=./P.joueurs.php");
+                            echo "Vous allez être redirigé sur la page joueur dans 3 seconds.";
+                            ?>
                         </div>
                     </div>
                     <?php
@@ -240,7 +252,10 @@ try
         ?>
         <div class="msgContainer">
             <div class="msgRetour">
-                <?php echo "Ce joueur n'existe pas"; ?>
+                <?php echo "Ce joueur n'existe pas";?><br><?php
+                header("refresh:5;url=./P.joueurs.php");
+                echo "Vous allez être redirigé sur la page joueur dans 3 seconds.";
+                ?>
             </div>
         </div>
         <?php

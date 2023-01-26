@@ -45,6 +45,9 @@
                 <li class="menu-item">
                     <a href="./E.Evaluation.php">Evaluation</a>
                 </li>
+                <li class="menu-item menu-dropdown">
+              <a href="./S.selection.php">Sélection</a>
+            </li>
             </li>
             </ul>
         </div>
@@ -81,9 +84,9 @@
         <div class="msgContainer">
             <div class="msgRetour">
                 <?php 
-                echo "Le joueur a été supprimé";
+                echo "Le joueur a été supprimé";?><br><?php
                 header("refresh:5;url=./P.joueurs.php");
-                echo "Vous allez être redirigé dans 5 seconds."; 
+                echo "Vous allez être redirigé sur la page joueur dans 3 seconds.";
                 ?>
             </div>
         </div>
@@ -95,14 +98,17 @@
         ?>
         <div class="msgContainer">
             <div class="msgRetour">
-                <?php echo "Ce joueur n'existe pas"; ?>
+                <?php echo "Ce joueur n'existe pas";?><br><?php
+                header("refresh:5;url=./P.joueurs.php");
+                echo "Vous allez être redirigé sur la page joueur dans 3 seconds.";
+                ?>
             </div>
         </div>
         <?php
     }
   ?>
 
-  <footer >
+  <footer id="IndexFooter" >
     <div>
       <p>Contacts</p>
     </div>
