@@ -13,7 +13,7 @@
       <h1>¯\_(ツ)_/¯</h1>
     </div>
 
-    <!-- menu header -->
+        <!-- menu header -->
     <nav class="header-menu">
       <div class="container">
         <ul class="navibar">
@@ -51,6 +51,7 @@
         </ul>
       </div>
     </nav>
+
   </header>
 
   

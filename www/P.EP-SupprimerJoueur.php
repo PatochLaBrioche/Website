@@ -14,8 +14,8 @@
         <h1>Entrez les données à modifier</h1>
         </div>
 
-    <!-- menu header -->
-    <nav class="header-menu">
+     <!-- menu header -->
+     <nav class="header-menu">
       <div class="container">
         <ul class="navibar">
           <li class="menu-item">
