@@ -11,8 +11,9 @@
     <div class="titre-header">
       <h1>Sélection</h1>
     </div>
-  <!-- menu header -->
-  <nav class="header-menu">
+
+    <!-- menu header -->
+    <nav class="header-menu">
       <div class="container">
         <ul class="navibar">
           <li class="menu-item">
@@ -39,19 +40,17 @@
                 <a href="./M.MM-ModifierMatch.php">Modifier un match</a>
               </li>
             </ul>
-            <li class="menu-item">
-                <a href="./E.Evaluation.php">Evaluation</a>
-            </li>
-            <li class="menu-item menu-dropdown">
-              <a href="./S.selection.php">Sélection</a>
-            </li>
           </li>
-          
+          <li class="menu-item">
+              <a href="./E.Evaluation.php">Evaluation</a>
+          </li>
+          <li class="menu-item">
+              <a href="./S.selection.php">Sélection</a>
+          </li>
         </ul>
       </div>
     </nav>
   </header>
-
   
   <form action="" method="POST" class="formMatch">
     <h1>Ajoutez un match</h1>
@@ -64,10 +63,12 @@
     <label for="lieu_rencontre">Lieu de la rencontre :</label>
     <input type="text" id="lieu_rencontre" name="lieu_rencontre" required><br><br>
     <input type="submit" value="Créer le match">
+    <button type="submit" value="Déjà un match ?" onclick="window.location.href='S.selectionJoueurs.php'">Déjà un match ?</button>
   </form>
 
 <?php
   include "dbaccess.php";
+  
   if(!empty($_POST['d_match']) && !empty($_POST['h_match']) && !empty($_POST['nom_equipe_adverse']) && !empty($_POST['lieu_rencontre']))
   {
     $d_match = $_POST['d_match'];
@@ -75,12 +76,14 @@
     $nom_equipe_adverse = $_POST['nom_equipe_adverse'];
     $lieu_rencontre = $_POST['lieu_rencontre'];
     $resultat = "En cours";
+
     $stmt = $conn->prepare("INSERT INTO `match`(`d_match`, `h_match`, `nom_equipe_adverse`, `lieu_rencontre`, `resultat`) VALUES (:d_match,:h_match,:nom_equipe_adverse,:lieu_rencontre,:resultat)");
     $stmt->bindValue(':d_match', $d_match, PDO::PARAM_STR);
     $stmt->bindValue(':h_match', $h_match, PDO::PARAM_STR);
     $stmt->bindValue(':nom_equipe_adverse', $nom_equipe_adverse, PDO::PARAM_STR);
     $stmt->bindValue(':lieu_rencontre', $lieu_rencontre, PDO::PARAM_STR);
     $stmt->bindValue(':resultat', $resultat, PDO::PARAM_STR);
+
     if ($stmt->execute()) {
       echo "New record created successfully";
     } else {
@@ -89,6 +92,13 @@
     header("location: S.selectionJoueurs.php"); 
   } 
 ?>
+
+    <footer id="IndexFooter">
+        <div>
+          <p>Contacts</p>
+        </div>
+    </footer>    
+
 
 </body>
 </html>

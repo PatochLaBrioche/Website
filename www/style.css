@@ -24,6 +24,7 @@ html, body {
 
   .header-menu {
     background-color: #333;
+    font-size: 15px;
   }
   
   .header-menu a {
@@ -94,6 +95,7 @@ html, body {
   {
     position: fixed;
     bottom: 0;
+    left: 0;
   }
 
   #center-submit
@@ -120,6 +122,7 @@ html, body {
     border : 4px solid black;
     border-radius: 20px;
     padding : 20px;
+    font-size: 20px;
   }
 
   .inputBox
@@ -138,6 +141,7 @@ html, body {
   border: 1px solid black;
   padding:2%;
   border-spacing: 0;
+  font-size: 20px;
 }
 
 .tableau th, .tableau td {
@@ -152,7 +156,7 @@ html, body {
 }
 
   /* ----------------------- */
-  /* ----------Menu--------- */
+  /* ----------MENU--------- */
   /* ----------------------- */
   
 .Joueur, .Match
@@ -162,6 +166,7 @@ html, body {
   align-items: center;
   padding-left: 2%;
   padding-right: 2%;
+  font-size: 20px;
 }
 .tab{
   border: 8px solid black;
@@ -201,21 +206,22 @@ html, body {
   /* -----Nouveau Joueur---- */
   /* ----------------------- */
 
-.form-nouveau-joueur
+.form-nouveau
 {
   display: flex;
-  flex-direction: column;
   padding : 15px;
-  margin: 7% 30% 7% 30%;
+  margin: 8% 30% 8% 30%;
   border: 4px solid black;
   width: 40%;
+  height:auto;
   border-radius: 15px;
+  font-size: 20px;
 }
 
 .form-lines
 {
   display:flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 8px;
   justify-content: space-between;
 }
@@ -230,6 +236,12 @@ html, body {
   padding: 10px;
 }
 
+#commentaire
+{
+  width:100%;
+  height: 20px;
+}
+
   /* ----------------------- */
   /* ------insertIntoDB----- */
   /* ----------------------- */
@@ -239,6 +251,7 @@ html, body {
     display: flex;
     justify-content: center;
     margin-top: 8%;
+    font-size: 20px;
   }
 
   .msgRetour
@@ -246,7 +259,7 @@ html, body {
     border: 4px solid black;
     border-radius: 15px;
     width: fit-content;
-    font-size: 1.5em;
+    font-size: 20px;
     padding: 2%;
   }
 
@@ -255,12 +268,13 @@ html, body {
   /* ----------------------- */
 
   .tableau-match {
-    border: 1px solid black;
+
     padding:2%;
     border-spacing: 0;
-    font-size: 25px;
-    margin: 50px;
     margin-top: 30px;
+    text-align: center;
+    margin: 8% auto 8% auto;
+    font-size: 20px;
   }
 
   /* ----------------------- */
@@ -272,7 +286,8 @@ html, body {
     display: flex;
     justify-content: center;
     height: 100%;
-    margin: 7% 30% 7% 30%;
+    margin: 8% 30% 8% 30%;
+    font-size: 20px;
   }
 
   .selection p {
@@ -280,102 +295,98 @@ html, body {
     font-size: 1.2em;
   }
   
-  #match-select, #joueur-select {
+  #select {
     margin-left: 10px;
     font-size: 1em;
     padding: 5px;
   }
 
-  /* ----------------------- */
-  /* ------Selection----- */
-  /* ----------------------- */
-  
+/* ----------------------- */
+/* ------Selection----- */
+/* ----------------------- */
 
-
-  .formMatch {
-    margin: 0 auto; /* pour centrer horizontalement */
-    margin-top: 40px;
-    width: 50%; /* pour définir la largeur du formulaire */
-    padding: 2%; /* pour ajouter un espacement intérieur */
-    text-align: center; /* pour centrer les éléments de formulaire */
-    box-sizing: border-box; /* pour inclure les bordures et les padding dans la dimension du formulaire */
-    border: 1px solid rgb(0, 0, 0); /* pour ajouter une bordure */
-    font-size: 1.5em; /* pour augmenter la taille des polices */
+.formMatch {
+  margin: 0 auto; /* pour centrer horizontalement */
+  margin-top: 40px;
+  width: 50%; /* pour définir la largeur du formulaire */
+  padding: 2%; /* pour ajouter un espacement intérieur */
+  text-align: center; /* pour centrer les éléments de formulaire */
+  box-sizing: border-box; /* pour inclure les bordures et les padding dans la dimension du formulaire */
+  border: 1px solid rgb(0, 0, 0); /* pour ajouter une bordure */
+  font-size: 1.5em; /* pour augmenter la taille des polices */
 }
 
-  .formMatch input[type="submit"] {
-    background-color: #4CAF50; /* pour changer la couleur de fond */
-    color: white; /* pour changer la couleur du texte */
-    padding: 16px 32px; /* pour ajuster la taille du bouton */
-    text-align: center; /* pour centrer le texte du bouton */
-    text-decoration: none; /* pour enlever la décoration de texte */
-    display: inline-block; /* pour afficher le bouton sur une ligne */
-    font-size: 1.2em; /* pour augmenter la taille de la police */
-    margin: 4px 2px; /* pour ajuster la distance entre le bouton et les autres éléments */
-    -webkit-transition-duration: 0.4s; /* pour animer les transitions */
-    transition-duration: 0.4s;
-    cursor: pointer; /* pour changer le curseur de la souris */
-    border-radius: 8px; /* pour ajouter des bords arrondis */
-    border: none; /* pour enlever la bordure */
+.formMatch input[type="submit"] {
+  background-color: #4CAF50; /* pour changer la couleur de fond */
+  color: white; /* pour changer la couleur du texte */
+  padding: 16px 32px; /* pour ajuster la taille du bouton */
+  text-align: center; /* pour centrer le texte du bouton */
+  text-decoration: none; /* pour enlever la décoration de texte */
+  display: inline-block; /* pour afficher le bouton sur une ligne */
+  font-size: 1.2em; /* pour augmenter la taille de la police */
+  margin: 4px 2px; /* pour ajuster la distance entre le bouton et les autres éléments */
+  -webkit-transition-duration: 0.4s; /* pour animer les transitions */
+  transition-duration: 0.4s;
+  cursor: pointer; /* pour changer le curseur de la souris */
+  border-radius: 8px; /* pour ajouter des bords arrondis */
+  border: none; /* pour enlever la bordure */
 }
 
 .formMatch h1 {
-  font-size: 2em; /* pour augmenter la taille de la police */
-  text-align: center; /* pour centrer le titre */
-  color: #ff0000; /* pour changer la couleur du titre */
-  margin-bottom: 20px; /* pour ajouter de l'espacement en dessous du titre */
+font-size: 2em; /* pour augmenter la taille de la police */
+text-align: center; /* pour centrer le titre */
+color: #ff0000; /* pour changer la couleur du titre */
+margin-bottom: 20px; /* pour ajouter de l'espacement en dessous du titre */
 }
 
 .formContainer {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
 }
 
 
 #Match {
-  width: 1
-  00%;
+width: 1
+00%;
 }
 
 .button-s{
-  margin-left:300px;
-  margin-top: 80px;
-  height: 40px;
-  width: 200px;
-  color: green;
+margin-left:300px;
+margin-top: 80px;
+height: 40px;
+width: 200px;
+color: green;
 }
 
 .button-a{
-  margin-left:300px;
-  margin-top: 80px;
-  height: 40px;
-  width: 200px;
-  color: #ff0000;
+margin-left:300px;
+margin-top: 80px;
+height: 40px;
+width: 200px;
+color: #cf0202;
 }
 
 .player-select-container {
-  width: 25%;
-  padding: 12px 20px;
-  margin-left: 30px;
-  margin-top: 30px;
-  display: flex;
-  align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+width: 25%;
+padding: 12px 20px;
+margin-left: 30px;
+margin-top: 30px;
+display: flex;
+align-items: center;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
 }
 
 .titulaire{
-  width: 100px;
-  float: right;
-  margin-left: 10px;
+width: 100px;
+float: right;
+margin-left: 10px;
 }
 
 .player-select {
-  width: 30%;
-  margin-left: 10px;
+width: 30%;
+margin-left: 10px;
 }
-
-
