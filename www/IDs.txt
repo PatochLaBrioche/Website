@@ -1,4 +1,0 @@
-
-Le login est le mot de passe professeur sont respectivement :
-    - professeur
-    - PassProf
